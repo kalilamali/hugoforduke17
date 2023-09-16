@@ -2,7 +2,7 @@ version: 0.2
 
 environment_variables:
   plaintext:
-    HUGO_VERSION: "0.76.2"
+    HUGO_VERSION: "0.118.2"
     
 phases:
   install:
@@ -19,7 +19,7 @@ phases:
     commands:
       - rm -rf public
       - hugo
-      - aws s3 sync public/ s3://hugoduke/ --region us-east-1 --delete
+      - aws s3 sync public/ s3://hugowebsiteduke/ --region us-east-1 --delete
   post_build:
     commands:
       - echo Build completed on `date`
